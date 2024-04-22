@@ -74,6 +74,7 @@ export default defineNuxtConfig({
                             "primary-300": "#028669",
                             "primary-400": "#015e4a",
                             "primary-500": "#015240",
+                            "primary-blue": "#1976D2",
                             "primary-dark": "#0D2F42",
                             "primary-grey-color": "#9aa1a3",
                             // =========SECONDARY========
@@ -164,8 +165,12 @@ export default defineNuxtConfig({
         lazy: true,
         langDir: "locales/",
         defaultLocale: "ar",
+        // dynamicRouteParams: true,
+        // preserveState: true,
+
         strategy: "prefix",
-        dynamicRouteParams: true,
+        detectBrowserLanguage: false,
+
         // skipSettingLocaleOnNavigate: true,
         // Vue configuration file, you can move it to the root folder
         // vueI18n: './config/i18n.config.ts',

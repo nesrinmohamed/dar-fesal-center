@@ -1,6 +1,7 @@
 <script setup >
 import RoutesManager from "~/core/RoutesManager";
 import { useRouter } from "vue-router";
+
 const router = useRouter();
 const items = ref([
   { title: "item1" },
@@ -39,6 +40,43 @@ const researchesLinks = ref([
     title: "visitor_research",
     path: RoutesManager.visitorResarchProgram,
   },
+]);
+
+const publishing = ref([
+  { title: "about_exports", path: RoutesManager.aboutExport },
+  {
+    title: "reaserches_paper",
+    programes: [
+      { title: "studies_journal", path: RoutesManager.studiesJournal },
+      { title: "fesal_journal", path: RoutesManager.fesalJournal },
+      { title: "human_journal", path: RoutesManager.humanJournal },
+    ],
+  },
+  {
+    title: "tracks",
+    path: RoutesManager.arabicResearch,
+    programes: [
+      { title: "studies", path: RoutesManager.studies },
+      { title: "readings", path: RoutesManager.readings },
+      { title: "paths", path: RoutesManager.paths },
+      { title: "comments", path: RoutesManager.comments },
+      { title: "african_follow_up", path: RoutesManager.africanFollowUp },
+      { title: "all_paper_researh", path: RoutesManager.allPaperResearch },
+    ],
+  },
+]);
+
+const darFesalItems = ref([
+  { title: "about_dar-fesal", path: RoutesManager.aboutDarFesal },
+  { title: "king_fesal_and_family", path: RoutesManager.kingFesalAndFamily },
+  { title: "print_matrial", path: RoutesManager.printMaterial },
+  { title: "photo_and_material", path: RoutesManager.photoAndMaterial },
+]);
+const aboutMeusum = ref([
+  { title: "meusum_home", path: RoutesManager.meusum },
+  { title: "about_meusum", path: RoutesManager.aboutMeuseum },
+  { title: "saudi_memory_unit", path: RoutesManager.saudiMemoryUnit },
+  { title: "exhibitions_events", path: RoutesManager.events },
 ]);
 </script>
 
@@ -152,9 +190,9 @@ const researchesLinks = ref([
         <v-btn
           flat
           elevation="0"
-          color="transparent"
           v-bind="props"
           class="btn align-center"
+          color="transparent"
         >
           {{ $t("publishing") }}
           <v-icon size="20" class="mx-1">mdi mdi-chevron-down</v-icon>
@@ -162,12 +200,78 @@ const researchesLinks = ref([
       </template>
       <v-list>
         <v-list-item
-          v-for="(item, index) in items"
+          v-for="(item, index) in publishing"
           :key="index"
           :value="index"
           class="text-primary-200"
         >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+          <NuxtLink
+            :to="localePath(item.path)"
+            v-if="item.title == 'about_exports'"
+            >{{ $t(item.title) }}</NuxtLink
+          >
+
+          <!-- ABOUT EXPORTS  DORPDOWN  -->
+          <v-menu open-on-hover>
+            <template
+              v-slot:activator="{ props }"
+              v-if="item.title === 'reaserches_paper'"
+            >
+              <NuxtLink
+                flat
+                elevation="0"
+                v-bind="props"
+                class="btn align-center"
+                color="transparent"
+              >
+                {{ $t("reaserches_paper") }}
+                <v-icon size="20" class="mx-1">mdi mdi-chevron-down</v-icon>
+              </NuxtLink>
+            </template>
+            <v-list>
+              <v-list-item
+                v-for="(program, index) in item.programes"
+                :key="index"
+                :value="index"
+                class="text-primary-200"
+              >
+                <NuxtLink :to="localePath(program.path)">{{
+                  $t(program.title)
+                }}</NuxtLink>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+
+          <!-- TRACKS  DORPDOWN  -->
+          <v-menu open-on-hover>
+            <template
+              v-slot:activator="{ props }"
+              v-if="item.title === 'tracks'"
+            >
+              <NuxtLink
+                flat
+                elevation="0"
+                v-bind="props"
+                class="btn align-center"
+                color="transparent"
+              >
+                {{ $t("tracks") }}
+                <v-icon size="20" class="mx-1">mdi mdi-chevron-down</v-icon>
+              </NuxtLink>
+            </template>
+            <v-list>
+              <v-list-item
+                v-for="(program, index) in item.programes"
+                :key="index"
+                :value="index"
+                class="text-primary-200"
+              >
+                <NuxtLink :to="localePath(program.path)">{{
+                  $t(program.title)
+                }}</NuxtLink>
+              </v-list-item>
+            </v-list>
+          </v-menu>
         </v-list-item>
       </v-list>
     </v-menu>
@@ -188,12 +292,11 @@ const researchesLinks = ref([
       </template>
       <v-list>
         <v-list-item
-          v-for="(item, index) in items"
+          v-for="(item, index) in darFesalItems"
           :key="index"
-          :value="index"
           class="text-primary-200"
         >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+          <NuxtLink :to="localePath(item.path)">{{ $t(item.title) }}</NuxtLink>
         </v-list-item>
       </v-list>
     </v-menu>
@@ -214,12 +317,12 @@ const researchesLinks = ref([
       </template>
       <v-list>
         <v-list-item
-          v-for="(item, index) in items"
+          v-for="(item, index) in aboutMeusum"
           :key="index"
           :value="index"
-          class="text-primary-200"
+          class="text-primary-200 w-100"
         >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+          <NuxtLink :to="localePath(item.path)">{{ $t(item.title) }}</NuxtLink>
         </v-list-item>
       </v-list>
     </v-menu>
@@ -306,7 +409,13 @@ const researchesLinks = ref([
 
     <!-- ============ contactUs========= -->
 
-    <v-btn flat elevation="0" color="transparent" class="btn align-center">
+    <v-btn
+      flat
+      elevation="0"
+      color="transparent"
+      class="btn align-center"
+      @click="router.push(localePath(RoutesManager.contactUs))"
+    >
       {{ $t("contactUs") }}
     </v-btn>
   </v-sheet>

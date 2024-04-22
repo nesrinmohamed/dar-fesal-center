@@ -30,7 +30,7 @@ import AssetsManager from "~/core/AssetsManager";
     </BaseHeader>
 
     <v-container>
-      <v-sheet width="897px" class="falsafa mb-">
+      <v-sheet max-width="897px" class="falsafa mb-5">
         <v-img
           :src="AssetsManager.arabicResearhHeader"
           width="867px"
@@ -67,7 +67,7 @@ import AssetsManager from "~/core/AssetsManager";
           المعُْجزةِ، وتأكيدًا لاستحقاقنا الحضاريِّ الأصيلِ.
         </p>
       </v-sheet>
-      <hr class="mt-5" inset />
+      <hr class="mt-5" color="#E9EEEF" />
 
       <v-sheet class="alroaya mb-5" width="897px">
         <h3 class="text-primary-100 my-5 text-h4">الرؤية</h3>
@@ -79,7 +79,7 @@ import AssetsManager from "~/core/AssetsManager";
           والفلسفية، والأدبية، والفنية.
         </p>
       </v-sheet>
-      <hr class="mt-5" thickness="1" />
+      <hr class="mt-5" color="#E9EEEF" />
 
       <div class="masarat">
         <h3 class="text-primary-100 my-5 text-h4">المسارات</h3>

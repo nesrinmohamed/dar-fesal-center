@@ -223,23 +223,24 @@ input {
   color: #fff;
   font-size: 16px;
 }
-
-.swiper-button-prev {
+.swiper .swiper-button-prev {
   right: 0 !important;
   left: auto !important;
 }
-
-.swiper-button-next {
+.swiper .swiper-button-next {
   left: 0 !important;
   right: auto !important;
 }
-
-.swiper-pagination {
+.swiper .swiper-pagination {
   bottom: 0 !important;
 }
-
-.swiper-pagination-bullet {
-  margin-top: 15px;
+.swiper .swiper-pagination-bullet {
+  width: 16px !important;
+  height: 16px !important;
+  background-color: #4dc0ab !important;
+}
+.swiper .swiper-pagination-bullet-active {
+  background-color: #0d2f42 !important;
 }
 
 a {
@@ -372,6 +373,14 @@ input[type=number] {
 }
 .v-stepper.xs .v-stepper-item__title {
   font-size: 8px !important;
+}
+
+.v-pagination__list {
+  display: inline-flex;
+  list-style-type: none;
+  justify-content: center;
+  width: 100%;
+  direction: ltr;
 }
 
 .opacity-25 {

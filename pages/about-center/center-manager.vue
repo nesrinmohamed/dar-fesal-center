@@ -92,7 +92,7 @@ const giftsAndgreattDegre = ref({
           </v-sheet>
         </v-col>
         <v-col cols="12" md="8">
-          <h3 class="text-secondary-500 font-semibold">
+          <h3 class="text-secondary-500 font-semibold mt-5">
             صاحب السمو الملكي الأمير تركي الفيصل بن عبد العزيز آل سعود
           </h3>
 

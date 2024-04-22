@@ -1,9 +1,5 @@
-export default function ({error, app, store, redirect}) {
-    // If the user is not authenticated
+export default defineNuxtRouteMiddleware((to, from) => {
+    console.log("From auth middleware");
 
-    // if (store.state.auth.user.token) {
-    //     redirect(app.i18n.locale === "en" ? "/en/person-info" : "/");
-    // } else if (store.state.auth.user.token) {
-    //     redirect(app.i18n.locale === "en" ? "/en/" : "/");
-    // }
-}
+    console.log("to");
+});

@@ -15,7 +15,7 @@ const email = ref("");
 
 <template>
   <footer
-    class="app-footer text-white px-8 pt-15 pb-5"
+    class="app-footer text-white px-8 pt-15 pb-5 mt-10"
     :class="$vuetify.display.name"
   >
     <v-container>

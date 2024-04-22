@@ -57,8 +57,7 @@ import value from "~/assets/img/value.png";
 // ========History===========
 import user from "~/assets/img/user.png";
 import user2 from "~/assets/img/user2.png";
-import star from "~/assets/img/fi-rr-star.png";
-import diploma from "~/assets/img/fi-rr-diploma.png";
+
 import frame from "~/assets/img/frame.png";
 
 import arrow from "~/assets/img/arrow-frame.png";
@@ -77,6 +76,71 @@ import project7 from "~/assets/img/project7.png";
 // ===============RESEARCHES ================
 import arabicResearhHeader from "~/assets/img/arabic-research-header.png";
 import masarImg from "~/assets/img/masar-img.png";
+import headerVisitorImg from "~/assets/img/visitor-research-header.png";
+import asiaHeadrer from "~/assets/img/asia-header.png";
+
+import studiesBook from "~/assets/img/studies-img.png";
+import readingsBook from "~/assets/img/readings-header-img.png";
+
+// =========DAR FESAL IMGS ============
+import darFesalImg1 from "~/assets/img/dar-fesal-img1.png";
+import darFesalImg2 from "~/assets/img/dar-fesal-img2.png";
+import darFesalImg3 from "~/assets/img/dar-fesal-img3.png";
+import darFesalImg4 from "~/assets/img/dar-fesal-img4.png";
+
+import darFesalContent1 from "~/assets/img/dar-fesal-img-contnt1.png";
+import darFesalContent2 from "~/assets/img/dar-fesal-img-contnet2.png";
+import darFesalfooter1 from "~/assets/img/dar-fesal-img-footer.png";
+import darFesalfooter2 from "~/assets/img/dar-fesal-img-footer2.png";
+import kingFesalAndFamily from "~/assets/img/king-fesal-and-family.png";
+
+import printMaterial1 from "~/assets/img/print-material-img1.png";
+import printMaterial2 from "~/assets/img/print-material-img2.png";
+import printMaterial3 from "~/assets/img/print-material-img3.png";
+import printMaterial4 from "~/assets/img/print-matrerial-img4.png";
+
+import kingPhoto from "~/assets/img/king-photo.png";
+import videoImg from "~/assets/img/video.png";
+import soundCloudImage from "~/assets/img/sounds-cloud.png";
+
+import swiperImage1 from "~/assets/img/swiper-image1.png";
+import swiperImage2 from "~/assets/img/swiper-image2.png";
+
+import cuurentEvent from "~/assets/img/current-event.png";
+import virtualEvent from "~/assets/img/virtual-event.png";
+import alwaysEvent from "~/assets/img/always-event.png";
+
+// ========== ABOUT MESUM =============
+import aboutMeusumImg1 from "~/assets/img/about-meusum-img1.png";
+import aboutMeusumImg2 from "~/assets/img/about-meusum-img2.png";
+import aboutMeusumImg3 from "~/assets/img/about-meusum-img3.png";
+import aboutMeusumImg4 from "~/assets/img/about-meusum-img4.png";
+import aboutMeusumImg5 from "~/assets/img/about-meusum-img5.png";
+import aboutMeusumImg6 from "~/assets/img/about-meusum-img6.png";
+
+import learningImg1 from "~/assets/img/learning-img1.png";
+import learningImg2 from "~/assets/img/learning-img2.png";
+
+import historyMeusumImg1 from "~/assets/img/history-img1.png";
+import historyMeusumImg2 from "~/assets/img/history-img2.png";
+
+import saudiMemoryUnit from "~/assets/img/saudi-memory-unit.png";
+
+import unitImage1 from "~/assets/img/unit-image1.png";
+import unitImage2 from "~/assets/img/unit-image2.png";
+import unitImage3 from "~/assets/img/unit-image3.png";
+
+import exhibtionsAndEvent from "~/assets/img/exhibtion-events-img.png";
+// ========ICONS============
+import clockIcon from "~/assets/img/fi-rr-clock.png";
+import locationIcon from "~/assets/img/fi-rr-marker.png";
+import callIcon from "~/assets/img/fi-rr-call-history.png";
+import printIcon from "~/assets/img/fi-rr-print.png";
+import book from "~/assets/img/fi-rr-book-alt.png";
+import edit from "~/assets/img/fi-rr-edit-alt.png";
+import star from "~/assets/img/fi-rr-star.png";
+import diploma from "~/assets/img/fi-rr-diploma.png";
+import youtubeIcon from "~/assets/img/youtube-player-icon.png";
 export default {
     logo,
     whiteLogo,
@@ -149,4 +213,64 @@ export default {
     // ==========Researches ===========
     arabicResearhHeader,
     masarImg,
+    headerVisitorImg,
+    asiaHeadrer,
+    // =============PUPLISHINGG==============
+    book,
+    edit,
+    studiesBook,
+    readingsBook,
+
+    // ==========DAR FESAL  ===========
+    darFesalImg1,
+    darFesalImg2,
+    darFesalImg3,
+    darFesalImg4,
+    darFesalContent1,
+    darFesalContent2,
+    darFesalfooter1,
+    darFesalfooter2,
+    kingFesalAndFamily,
+
+    printMaterial1,
+    printMaterial2,
+    printMaterial3,
+    printMaterial4,
+
+    // =====ABOUT MESUM ===========
+    kingPhoto,
+    videoImg,
+    soundCloudImage,
+
+    swiperImage1,
+    swiperImage2,
+    cuurentEvent,
+    virtualEvent,
+    alwaysEvent,
+
+    aboutMeusumImg1,
+    aboutMeusumImg2,
+    aboutMeusumImg3,
+    aboutMeusumImg4,
+    aboutMeusumImg5,
+    aboutMeusumImg6,
+
+    learningImg1,
+    learningImg2,
+
+    historyMeusumImg1,
+    historyMeusumImg2,
+    saudiMemoryUnit,
+
+    unitImage1,
+    unitImage2,
+    unitImage3,
+    exhibtionsAndEvent,
+
+    // =====ICONS==========
+    clockIcon,
+    locationIcon,
+    callIcon,
+    printIcon,
+    youtubeIcon,
 };

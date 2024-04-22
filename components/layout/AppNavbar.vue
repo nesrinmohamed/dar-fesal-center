@@ -6,8 +6,10 @@ import { useSharedStore } from "~/stores/sharedStore";
 
 import { useLocale } from "vuetify";
 import { useDisplay } from "vuetify";
+import { useRouter } from "vue-router";
 /*##########[ DEFINES ]##########*/
 const isAuthorization = ref(true);
+const router = useRouter();
 const props = defineProps(["modelValue"]);
 const emit = defineEmits(["update:modelValue"]);
 const sharedStore = useSharedStore();
@@ -81,8 +83,13 @@ onBeforeUnmount(() => {});
     </NuxtLink>
 
     <nav class="nav-menu d-flex align-center justify-center">
-      <div class="icon">
-        <v-icon size="25" color="secondary-300" class="mx-2">
+      <div class="icon curoser-pointer">
+        <v-icon
+          size="25"
+          color="secondary-300"
+          class="mx-2"
+          @click="router.push(localePath(RoutesManager.cart))"
+        >
           mdi mdi-cart-outline</v-icon
         >
         <v-sheet
@@ -95,14 +102,17 @@ onBeforeUnmount(() => {});
       </div>
 
       <div class="icon">
-        <v-icon size="25" color="secondary-300" class="mx-2">
+        <v-icon
+          size="25"
+          color="secondary-300"
+          class="mx-2"
+          @click="router.push(localePath(RoutesManager.favorite))"
+        >
           mdi mdi-heart-outline</v-icon
         >
       </div>
       <div class="icon">
-        <v-icon size="25" color="secondary-300" class="">
-          mdi mdi-magnify</v-icon
-        >
+        <v-icon size="25" color="secondary-300"> mdi mdi-magnify</v-icon>
       </div>
       <v-btn color="background" height="40px" class="mx-3" rounded="0">
         <v-icon class="me-1" size="25"> mdi-web </v-icon>

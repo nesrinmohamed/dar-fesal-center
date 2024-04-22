@@ -21,10 +21,10 @@ const items = ref([
 ]);
 
 const centerLevels = ref([
-  { title: "البحوث", path: RoutesManager.home },
-  { title: "دا النشر", path: RoutesManager.home },
+  { title: "البحوث", path: RoutesManager.researches },
+  { title: "دا النشر", path: RoutesManager.aboutExport },
   { title: "المكتبة", path: RoutesManager.home },
-  { title: "دار آل فيصل", path: RoutesManager.home },
+  { title: "دار آل فيصل", path: RoutesManager.aboutDarFesal },
   { title: "المتحف", path: RoutesManager.home },
 ]);
 </script>
@@ -142,18 +142,18 @@ const centerLevels = ref([
       <h3 class="my-5">أدوار المركز الرئيسية</h3>
       <v-sheet class="levels-card">
         <v-container
-          class="levels-container d-flex align-center justify-space-between flex-wrap"
+          class="levels-container d-flex align-center justify-center flex-wrap"
         >
           <v-card
             width="150px"
-            height="145px"
+            height="120px"
             color="#E9EEEF"
             base-color="#A3B7BE"
             class="rounded-lg text-secondary-500 flex-center mx-2 my-2 text-h6"
             v-for="(level, i) in centerLevels"
             :key="i"
           >
-            <NuxtLink :to="level.path"> {{ level.title }}</NuxtLink>
+            <NuxtLink :to="localePath(level.path)"> {{ level.title }}</NuxtLink>
           </v-card>
         </v-container>
       </v-sheet>
@@ -199,33 +199,11 @@ const centerLevels = ref([
       }
     }
   }
-
-  .levels-card {
-    .levels-container {
-      width: 90% !important;
-      margin: auto auto -6px -20px;
-    }
-  }
-  &.sm {
+  &.xl {
     .levels-card {
       .levels-container {
-        width: 100% !important;
-        margin: auto auto -6px -80px;
-
-        .v-card {
-          width: 180px !important;
-        }
-      }
-    }
-  }
-  &.xs {
-    .levels-card {
-      .levels-container {
-        width: 100% !important;
-        margin: auto auto -6px -39px;
-        .v-card {
-          width: 250px !important;
-        }
+        width: 75% !important;
+        margin: auto;
       }
     }
   }

@@ -42,7 +42,8 @@ const bookStore = "/book-store/books";
 const antiquites = "/book-store/antiquites";
 const soldPoints = "/book-store/sold-points";
 const cart = "/cart";
-const payment = "/cart/payment";
+const favorite = "/favorite";
+const payment = "/payment";
 // =========About Reseacrch===========
 
 const researches = "/researches/about-researches";
@@ -53,6 +54,31 @@ const africanProgram = "/researches/research-programes/african-program";
 const asiaProgram = "/researches/research-programes/asia-program";
 const visitorResarchProgram = "/researches/research-program-visitor";
 
+// ============PUPLISIHNG============
+
+const aboutExport = "/publishing/about-exports";
+const studies = "/publishing/studies";
+const readings = "/publishing/readings";
+const comments = "/publishing/comments";
+const paths = "/publishing/paths";
+const africanFollowUp = "/publishing/african-follow-up";
+const allPaperResearch = "/publishing/all-papers-research";
+const fesalJournal = "/publishing/tracks/fesal-journal";
+const studiesJournal = "/publishing/tracks/studies-journal";
+const humanJournal = "/publishing/tracks/human-journal";
+
+// ===========ABOUT DAR FESAL ===========
+
+const aboutDarFesal = "/about-dar-fesal";
+const kingFesalAndFamily = "/about-dar-fesal/king-fesal-family";
+const photoAndMaterial = "/about-dar-fesal/photo-material";
+const printMaterial = "/about-dar-fesal/print-material";
+// =============== MESUM==============
+
+const meusum = "/meusum";
+const aboutMeuseum = "/meusum/about-meusum";
+const saudiMemoryUnit = "/meusum/saudi-memory-unit";
+const events = "/meusum/exhibtions-events";
 export default {
     home,
     back,
@@ -97,6 +123,7 @@ export default {
     antiquites,
     soldPoints,
     cart,
+    favorite,
     payment,
     // =========ABOUT RESEARCHES ==========
     researches,
@@ -106,4 +133,26 @@ export default {
     africanProgram,
     asiaProgram,
     visitorResarchProgram,
+
+    // ======== PUPLISHING===========
+    aboutExport,
+    studies,
+    readings,
+    paths,
+    comments,
+    africanFollowUp,
+    allPaperResearch,
+    studiesJournal,
+    fesalJournal,
+    humanJournal,
+
+    // ======= ABOUT DAR FESAL ==========
+    aboutDarFesal,
+    kingFesalAndFamily,
+    printMaterial,
+    photoAndMaterial,
+    meusum,
+    aboutMeuseum,
+    saudiMemoryUnit,
+    events,
 };

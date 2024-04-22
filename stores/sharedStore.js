@@ -1,13 +1,9 @@
 /*##########[ IMPORTS ]##########*/
 import {defineStore} from "pinia";
-import images from "~/core/AssetsManager";
 import RoutesManager from "~/core/RoutesManager";
 import {useDisplay} from "vuetify";
 import {useNotification} from "@kyvg/vue3-notification";
 import AssetsManager from "~/core/AssetsManager";
-import path from "path";
-
-// const { t } = useI18n();
 
 export const useSharedStore = defineStore("shared", () => {
     /*##########[ DEFINES ]##########*/

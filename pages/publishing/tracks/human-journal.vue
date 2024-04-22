@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="research-programes">research programs</div>
+  <div class="human-journal">human journal</div>
 </template>
 
 <style lang="scss" scoped>
